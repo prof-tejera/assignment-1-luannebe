@@ -2,13 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
+
 import DocumentationView from "./views/DocumentationView";
 import TimersView from "./views/TimersView";
 
 const Container = styled.div`
-  background: #f0f6fb;
-  height: 100vh;
-  overflow: auto;
+  margin: 40px auto;
 `;
 
 function App() {
@@ -35,6 +34,7 @@ function App() {
         </Switch>
       </Router>
     </Container>
+
   );
 }
 
