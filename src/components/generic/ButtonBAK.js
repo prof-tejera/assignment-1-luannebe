@@ -4,30 +4,14 @@ import styled from "styled-components";
 import { theme } from "../../utils";
 import { darken, rem } from 'polished';
 
-export class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isDisabled: false,
-    };
-  }
-
-  render() {
-    const { label } = this.props;
-    return (
-      <button disabled={this.state.isDisabled} className={this.props.className} onClick={() => this.setState({ isDisabled: true })}>{label}</button>
-    );
-  }
-}
-
-const StyledButton = styled(Button)`
+const StyledButton = styled.button`
   height: 40px;
   width: ${rem('80px')};
   margin: 6px;
   border-width: 0;
   border-radius: 40px;
   filter: ${theme.dropShadow};
-  color: ${theme.lightTextColor};
+  color: #FFFFFF;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
@@ -56,16 +40,6 @@ export const StartButton = styled(StyledButton) `
   &:hover {
     background-color: ${darken('0.1', theme.startColor)};
   }
-
-  &:disabled {
-    background-color: ${theme.disabledColor};
-    filter: none;
-    &:hover{
-      filter: none;
-      cursor: not-allowed;
-      background-color: ${darken('0', theme.disabledColor)}
-    }
-  }
 `;
 
 export const StopButton = styled(StyledButton) `
@@ -84,10 +58,24 @@ export const ResetButton = styled(StyledButton) `
   }
 `;
 
-/*
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      disabled: false,
+    };
+  }
+
+  render() {
+    return (
+      <StyledButton {...this.props} />
+    );
+  }
+}
+
+
 Button.propTypes = {
   label: PropTypes.string,
-}; */
+};
 
 export default Button;
-

@@ -7,16 +7,13 @@ import XY from "../components/timers/XY";
 import Tabata from "../components/timers/Tabata";
 
 const Timers = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto;
 `;
 
 const Timer = styled.div`
-  border: 1px solid gray;
-  padding: 20px;
-  margin: 10px;
-  font-size: 1.5rem;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
 `;
 
 const TimerTitle = styled.div``;
@@ -33,7 +30,7 @@ function App() {
     <Timers>
       {timers.map((timer) => (
         <Timer>
-          <TimerTitle>{timer.title}</TimerTitle>
+
           {timer.C}
         </Timer>
       ))}
