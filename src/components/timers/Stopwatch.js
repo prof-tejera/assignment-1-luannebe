@@ -19,7 +19,7 @@ class Stopwatch extends React.Component {
     return (
       <Container>
         <Header><Title>Stopwatch</Title></Header>
-        <TimerDisplay>00:00:00</TimerDisplay>
+        <TimerDisplay visible={"block"}>00:00:00</TimerDisplay>
         <ButtonGroup>
           <StopButton disabled={true} label="Stop"></StopButton>
           <ResetButton disabled={true} label="Reset"></ResetButton>

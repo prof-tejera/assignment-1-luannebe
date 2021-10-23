@@ -4,16 +4,13 @@ import styled from "styled-components";
 import { theme, typeScale, fontWeight } from "../../utils";
 import { darken, rem } from 'polished';
 
-export const Title = styled.h2`
+export const Subtitle = styled.h3`
   margin: 1.2rem auto;
   padding: 0 auto;
-  color: ${theme.lightTextColor}; 
+  color: ${theme.mediumTextColor}; 
   font-family: ${theme.primaryFont};
-  font-size: ${typeScale.header2} ;
+  font-size: ${typeScale.header3} ;
   font-weight: ${fontWeight.bold};
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  text-transform: none;
+  text-align: center;
 `

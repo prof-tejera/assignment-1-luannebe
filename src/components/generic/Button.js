@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "../../utils";
+import { theme, fontWeight, typeScale } from "../../utils";
 import { darken, rem } from 'polished';
 
 export class Button extends React.Component {
@@ -28,12 +28,11 @@ const StyledButton = styled(Button)`
   border-radius: 40px;
   filter: ${theme.dropShadow};
   color: ${theme.lightTextColor};
-  font-size: 18px;
-  font-weight: 700;
+  font-family: ${theme.primaryFont};
+  font-size: ${typeScale.header5};
+  font-weight: ${fontWeight.bold};
   text-transform: uppercase;
   cursor: pointer;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
 
   &:hover {
     filter: ${theme.dropShadowOnHover};

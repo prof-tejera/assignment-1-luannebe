@@ -4,12 +4,8 @@ import styled from "styled-components";
 import { theme } from "../../utils";
 import { darken, rem } from 'polished';
 
-export const Header = styled.div`
-  width: 100%;
+export const SetTimer = styled.div`
+  display: ${(props) => props.visible};
+  width: auto;
   height: auto;
-  background-color: ${theme.primaryColor};
-  margin: 0;
-  border-radius: 12px 12px 0px 0px;
 `;
-
-export default Header;

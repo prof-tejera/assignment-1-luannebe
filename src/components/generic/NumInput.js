@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "../../utils";
+import { theme, fontWeight, typeScale } from "../../utils";
 import { darken, rem } from 'polished';
 
 const Container = styled.div`
@@ -15,8 +15,8 @@ const Input = styled.input.attrs({ type: 'number' })`
   border-width: 0;
   border-radius: 3px;
   background-color: ${theme.mediumBackground};
-  font-size: 36px;
-  font-weight: 400;
+  font-size: ${rem('36px')};
+  font-weight: ${fontWeight.regular};
   font-family: ${theme.displayFont};
   color: ${theme.darkTextColor};
 
