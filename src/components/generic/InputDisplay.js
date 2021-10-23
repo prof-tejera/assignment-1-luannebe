@@ -4,9 +4,11 @@ import styled from "styled-components";
 import { theme } from "../../utils";
 import { darken, rem } from 'polished';
 
-export const ControlPanel = styled.div`
-  width: 100%;
+export const InputDisplay = styled.div`
+  width: auto;
+  height: auto;
+  margin: 0 10px 30px;
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 40px;
+  flex-direction: row;
+  justify-content: space-around;
 `;

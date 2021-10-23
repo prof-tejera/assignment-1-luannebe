@@ -21,8 +21,8 @@ class Stopwatch extends React.Component {
         <Header><Title>Stopwatch</Title></Header>
         <TimerDisplay>00:00:00</TimerDisplay>
         <ButtonGroup>
-          <StopButton disabled="true" label="Stop"></StopButton>
-          <ResetButton disabled="true" label="Reset"></ResetButton>
+          <StopButton disabled={true} label="Stop"></StopButton>
+          <ResetButton disabled={true} label="Reset"></ResetButton>
           <StartButton label="Start">Start</StartButton>
         </ButtonGroup>
       </Container>

@@ -7,7 +7,7 @@ export const theme = {
 	startColor: green[100],
 	stopColor: red[200],
 	resetColor: blue[300],
-	disabledColor: blue[100],
+	disabledColor: neutral[250],
 	neutralBackground: neutral[200],
 	lightBackground: neutral[100],
 	mediumBackground: blue[100],
