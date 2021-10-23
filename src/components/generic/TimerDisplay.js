@@ -5,7 +5,7 @@ import { theme, typeScale, fontWeight } from "../../utils";
 import { darken, rem } from 'polished';
 
 export const TimerDisplay = styled.div`
-  display: ${(props) => props.visible};
+  display: ${(props) => props.visible ? "block" : "none"};
   width: auto;
   height: ${rem('80px')};
   margin: 0 10px 60px;

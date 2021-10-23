@@ -19,8 +19,8 @@ class Countdown extends React.Component {
     return (
       <Container>
         <Header><Title>Countdown</Title></Header>
-        <TimerDisplay visible={"none"} >00:00:00</TimerDisplay>
-        <SetTimer visible={"block"}>
+        <TimerDisplay visible={false} >00:00:00</TimerDisplay>
+        <SetTimer visible={true}>
           <Subtitle>Set Timer</Subtitle>
           <InputDisplay >
             <NumInput id="hours" name="hours" min="0" max="12" defaultVal="0" label="Hours" />

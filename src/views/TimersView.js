@@ -30,7 +30,6 @@ function App() {
     <Timers>
       {timers.map((timer) => (
         <Timer>
-
           {timer.C}
         </Timer>
       ))}

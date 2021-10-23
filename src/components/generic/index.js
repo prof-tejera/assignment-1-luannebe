@@ -7,3 +7,4 @@ export { SetTimer } from "./SetTimer";
 export { ButtonGroup } from "./ButtonGroup";
 export { NumInput } from "./NumInput";
 export { InputDisplay } from "./InputDisplay";
+export { InputGroup } from "./InputGroup";

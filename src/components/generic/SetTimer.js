@@ -5,7 +5,7 @@ import { theme } from "../../utils";
 import { darken, rem } from 'polished';
 
 export const SetTimer = styled.div`
-  display: ${(props) => props.visible};
+  display: ${(props) => props.visible ? "block" : "none"};
   width: auto;
   height: auto;
 `;
