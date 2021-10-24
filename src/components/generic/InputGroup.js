@@ -5,12 +5,19 @@ import { theme, typeScale, fontWeight } from "../../utils";
 import { darken, rem } from 'polished';
 
 const Container = styled.div`
-  display: block;
+  margin: 0 auto;
+
+  border: 1px solid ${theme.secondaryColor};
+  padding: 3px;  
+  &:nth-child(3) {
+    margin-left: 10px;
+    max-width: 46%;
+  }
 `;
 
 const Title = styled.h6`
   margin: 0.2rem auto 0.5rem;
-  padding: 0 auto;
+  padding: 0;
   color: ${theme.mediumTextColor}; 
   font-family: ${theme.primaryFont};
   font-size: ${typeScale.small} ;

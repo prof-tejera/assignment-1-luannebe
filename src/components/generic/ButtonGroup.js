@@ -8,5 +8,5 @@ export const ButtonGroup = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 40px;
+  margin: 0 auto 32px;
 `;

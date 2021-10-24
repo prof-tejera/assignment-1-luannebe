@@ -7,19 +7,22 @@ import { darken, rem } from 'polished';
 const Container = styled.div`
   text-align: center;
   display: inline-block;
+  width: 5rem;
+  margin: 0 auto 6px;
 `; 
 
 const Input = styled.input.attrs({ type: 'number' })`
-  display: inline;
+  width: 4.55rem;
   margin: 3px;
   border-width: 0;
   border-radius: 3px;
   background-color: ${theme.mediumBackground};
-  font-size: ${rem('36px')};
+  font-size: ${rem('32px')};
   font-weight: ${fontWeight.regular};
   font-family: ${theme.displayFont};
   color: ${theme.darkTextColor};
-
+  padding: 3px;
+  text-align: center;
 `;
 
 const Label = styled.label`
@@ -30,7 +33,6 @@ const Label = styled.label`
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  display: block;
 `;
 
 export class NumInput extends React.Component {

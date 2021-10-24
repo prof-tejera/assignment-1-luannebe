@@ -15,6 +15,5 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
-  margin: 20px auto;
-  position: relative; 
+  margin: 20px auto; 
 `;

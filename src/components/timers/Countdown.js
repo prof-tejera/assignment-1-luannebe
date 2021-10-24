@@ -25,7 +25,7 @@ class Countdown extends React.Component {
           <InputDisplay >
             <NumInput id="hours" name="hours" min="0" max="12" defaultVal="0" label="Hours" />
             <NumInput id="minutes" name="minutes" min="0" max="59" defaultVal="0" label="Minutes" />
-            <NumInput id="seconds" name="seconds" min="1" max="59" defaultVal="1" label="Seconds" />
+            <NumInput id="seconds" name="seconds" min="0" max="59" defaultVal="0" label="Seconds" />
           </InputDisplay>
         </SetTimer>
         <ButtonGroup>

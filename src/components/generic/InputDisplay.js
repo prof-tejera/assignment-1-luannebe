@@ -7,8 +7,10 @@ import { darken, rem } from 'polished';
 export const InputDisplay = styled.div`
   width: auto;
   height: auto;
-  margin: 0 10px 30px;
+  margin: 0 10px 10px;
   display: flex;
+  display-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+
 `;
