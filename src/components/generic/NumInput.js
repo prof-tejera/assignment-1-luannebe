@@ -64,5 +64,9 @@ NumInput.propTypes = {
   label: PropTypes.string,
 }; 
 
+NumInput.defaultProps = {
+  defaultVal: "0",
+};
+
 export default NumInput;
 

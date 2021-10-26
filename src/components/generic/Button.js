@@ -13,9 +13,9 @@ export class Button extends React.Component {
   }
 
   render() {
-    const { disabled, className, label } = this.props;
+    const { className, label } = this.props;
     return (
-      <button disabled={disabled} className={className} onClick={() => this.setState({ isDisabled: true })}>{label}</button>
+      <button disabled={this.state.isDisabled} onClick={() => this.setState({ isDisabled: true })} className={className} >{label}</button>
     );
   }
 }

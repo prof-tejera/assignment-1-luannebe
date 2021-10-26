@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { rem, darken } from 'polished';
+import { rem,  } from 'polished';
 import { theme } from './theme';
-import { fontWeight, typeScale } from './typography';
+import { fontWeight } from './typography';
 
 //
 // Containers
@@ -27,6 +27,19 @@ export const Header = styled.div`
   background-color: ${theme.primaryColor};
   margin: 0;
   border-radius: 12px 12px 0px 0px;
+`;
+
+export const RunTimer = styled.div`
+  display: ${(props) => props.visible ? "block" : "none"};
+  width: auto;
+  height: auto;
+`;
+
+export const SetTimer = styled.div`
+  display: ${(props) => props.visible ? "block" : "none"};
+  width: auto;
+  height: auto;
+  margin-bottom: 20px
 `;
 
 export const TimerDisplay = styled.div`
@@ -72,41 +85,4 @@ export const ButtonGroup = styled.div`
   margin: 0 auto 32px;
 `;
 
-//
-// Headings
-//
-export const Title = styled.h2`
-  margin: 1.2rem auto;
-  padding: 0 auto;
-  color: ${theme.lightTextColor}; 
-  font-family: ${theme.primaryFont};
-  font-size: ${typeScale.header2} ;
-  font-weight: ${fontWeight.bold};
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`;
 
-export const Subtitle = styled.h3`
-  margin: 1.2rem auto;
-  padding: 0 auto;
-  color: ${theme.mediumTextColor}; 
-  font-family: ${theme.primaryFont};
-  font-size: ${typeScale.header3} ;
-  font-weight: ${fontWeight.bold};
-  text-transform: none;
-  text-align: center;
-`;
-
-export const Heading = styled.h4`
-  margin: 0.2rem auto 0.5rem;
-  padding: 0;
-  color: ${theme.mediumTextColor}; 
-  font-family: ${theme.primaryFont};
-  font-size: ${typeScale.small} ;
-  font-weight: ${fontWeight.bold};
-  text-transform: uppercase;
-  text-align: center;
-`;

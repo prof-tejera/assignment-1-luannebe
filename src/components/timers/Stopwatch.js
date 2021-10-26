@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Header, Title, TimerDisplay, ButtonGroup } from "../../utils/styles";
+import { Container, Header, TimerDisplay, ButtonGroup } from "../../utils/containers";
+import { Title,  } from "../../utils/headings";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
 

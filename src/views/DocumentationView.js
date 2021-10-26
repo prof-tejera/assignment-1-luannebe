@@ -3,11 +3,9 @@ import styled from "styled-components";
 
 import DocumentComponent from "../components/documentation/DocumentComponent";
 
-import Loading from "../components/generic/Loading";
-import { StartButton, StopButton, ResetButton } from "../components/generic/Button";
-import { NumInput, Rounds, Cycle } from "../components/generic";
-import { TimerDisplay } from "../utils/styles"
-import { WorkPeriod, RestPeriod } from "../components/generic/Period";
+import { StartButton } from "../components/generic/Button";
+import { NumInput } from "../components/generic";
+
 
 const Container = styled.div`
   display: flex;
@@ -28,24 +26,12 @@ class Documentation extends React.Component {
         <div>
           <Title>Documentation</Title>
           <DocumentComponent
-            title="Loading spinner "
-            component={<Loading />}
-            propDocs={[
-              {
-                prop: "size",
-                description: "Changes the size of the loading spinner",
-                type: "string",
-                defaultValue: "medium",
-              },
-            ]}
-          />
-          <DocumentComponent
-            title="StartButton"
-            component={<StartButton disabled={false} label="Start" />}
+            title="Button"
+            component={<StartButton label="Start" />}
             propDocs={[
               {
                 prop: "disabled",
-                description: "Disables button and changes styling",
+                description: "Disables button and triggers style changes",
                 type: "boolean",
                 defaultValue: "false",
               },
@@ -55,6 +41,11 @@ class Documentation extends React.Component {
                 type: "string",
                 defaultValue: "",
               },
+              {
+                prop: "onClick",
+                description: "Callback function. TBD in next phase.",
+                type: "func",
+              },
             ]}
           />
           <DocumentComponent
@@ -62,22 +53,40 @@ class Documentation extends React.Component {
             component={<NumInput id="hours" name="hours" min="0" max="12" defaultVal="0" label="Hours" />}
             propDocs={[
               {
-                prop: "disabled",
-                description: "",
-                type: "boolean",
+                prop: "id",
+                description: "Id for the number input field (HTML input type number)",
+                type: "string",
                 defaultValue: "",
               },
-            ]}
-          />
-          <DocumentComponent
-            title="TimerDisplay"
-            component={<TimerDisplay visible={true} >00:00:00</TimerDisplay>}
-            propDocs={[
               {
-                prop: "disabled",
-                description: "Disables button and changes styling",
-                type: "boolean",
-                defaultValue: "false",
+                prop: "name",
+                description: "Name for the number input field",
+                type: "string",
+                defaultValue: "",
+              },
+              {
+                prop: "min",
+                description: "Minimum allowed number input value",
+                type: "string",
+                defaultValue: "",
+              },
+              {
+                prop: "max",
+                description: "Maximum allowed number input value",
+                type: "string",
+                defaultValue: "",
+              },
+              {
+                prop: "defaultValue",
+                description: "Value to appear when Timer is first displayed",
+                type: "string",                
+                defaultValue: "0",
+              },
+              {
+                prop: "label",
+                description: "Text to label the number input control",
+                type: "string",   
+                defaultValue: "",
               },
             ]}
           />
