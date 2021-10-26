@@ -20,3 +20,5 @@ export const fontWeight = {
 	bold: "700",
 	extrabold: "800",	
 }
+
+

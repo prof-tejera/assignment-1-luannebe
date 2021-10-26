@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Header, Title, Subtitle, TimerDisplay, SetTimer, RunTimer, ButtonGroup, InputGroup, NumInput, InputDisplay, Rounds, Cycle } from "../generic";
+import { SetTimer, RunTimer, NumInput, Rounds,  } from "../generic";
+import { Container, Header, Title,  Subtitle, Heading, TimerDisplay, InputDisplay,InputGroup, Cycle, ButtonGroup,   } from "../../utils/styles";
 import { WorkPeriod, RestPeriod } from "../generic/Period";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
@@ -30,15 +31,18 @@ class Tabata extends React.Component {
         <SetTimer visible={ this.state.mode === "setTime" }>
           <Subtitle>Set Timer</Subtitle>
           <InputDisplay >
-            <InputGroup title="Work Interval">
+            <InputGroup>
+              <Heading>Work Interval</Heading>
               <NumInput id="wminutes" name="wminutes" min="0" max="59" defaultVal="0" label="Minutes" />
               <NumInput id="wseconds" name="wseconds" min="0" max="59" defaultVal="0" label="Seconds" />
             </InputGroup>
             <InputGroup title="Rest Interval">
+              <Heading>Rest Interval</Heading>
               <NumInput id="rminutes" name="rminutes" min="0" max="59" defaultVal="0" label="Minutes" />
               <NumInput id="rseconds" name="rseconds" min="0" max="59" defaultVal="0" label="Seconds" />
             </InputGroup> 
-            <InputGroup title="Rounds">                   
+            <InputGroup> 
+              <Heading>Rounds</Heading>                  
               <NumInput id="rounds" name="rounds" min="1" max="12" defaultVal="1" label="Number" />
             </InputGroup>           
           </InputDisplay>

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Header, Title, Subtitle, TimerDisplay, SetTimer, RunTimer, ButtonGroup, InputGroup, NumInput, InputDisplay, Rounds } from "../generic";
+import { SetTimer, RunTimer, NumInput, Rounds } from "../generic";
+import { Container, Header, Title, Subtitle, Heading, TimerDisplay, InputDisplay, InputGroup, ButtonGroup, } from "../../utils/styles";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
 
@@ -17,16 +18,18 @@ class XY extends React.Component {
       <Container>
         <Header><Title>XY</Title></Header>
         <RunTimer visible={this.state.mode === "displayTime"}>
-          <TimerDisplay visible={true} >00:00:00</TimerDisplay>
-          <Rounds visible={true}>Round: 1 <span>of</span> 4</Rounds>
+          <TimerDisplay>00:00:00</TimerDisplay>
+          <Rounds>Round: 1 <span>of</span> 4</Rounds>
         </RunTimer>
         <SetTimer visible={(this.state.mode === "setTime")}>
           <Subtitle>Set Timer</Subtitle>
-          <InputDisplay >
-            <InputGroup title="Rounds">                   
+          <InputDisplay>
+            <InputGroup>
+              <Heading>Rounds</Heading>                   
               <NumInput id="rounds" name="rounds" min="1" max="12" defaultVal="1" label="Number" />
             </InputGroup>
-            <InputGroup title="Time Per Round">
+            <InputGroup>
+              <Heading>Time Per Round</Heading> 
               <NumInput id="minutes" name="minutes" min="0" max="59" defaultVal="0" label="Minutes" />
               <NumInput id="seconds" name="seconds" min="0" max="59" defaultVal="0" label="Seconds" />
             </InputGroup>

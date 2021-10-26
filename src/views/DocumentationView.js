@@ -5,7 +5,8 @@ import DocumentComponent from "../components/documentation/DocumentComponent";
 
 import Loading from "../components/generic/Loading";
 import { StartButton, StopButton, ResetButton } from "../components/generic/Button";
-import { NumInput, TimerDisplay, Rounds, Cycle } from "../components/generic";
+import { NumInput, Rounds, Cycle } from "../components/generic";
+import { TimerDisplay } from "../utils/styles"
 import { WorkPeriod, RestPeriod } from "../components/generic/Period";
 
 const Container = styled.div`

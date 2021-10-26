@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Header, Title, Subtitle, TimerDisplay, SetTimer, RunTimer, ButtonGroup, NumInput, InputDisplay } from "../generic";
+import { SetTimer, 
+  RunTimer, NumInput } from "../generic";
+import { Container, Header, Title, TimerDisplay, ButtonGroup, Subtitle, InputDisplay  } from "../../utils/styles";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
 
