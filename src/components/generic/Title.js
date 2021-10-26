@@ -1,8 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme, typeScale, fontWeight } from "../../utils";
-import { darken, rem } from 'polished';
 
 export const Title = styled.h2`
   margin: 1.2rem auto;
@@ -16,4 +13,4 @@ export const Title = styled.h2`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-`
+`;

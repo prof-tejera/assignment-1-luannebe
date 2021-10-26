@@ -6,6 +6,7 @@ export { TimerDisplay } from "./TimerDisplay";
 export { SetTimer } from "./SetTimer";
 export { RunTimer } from "./RunTimer";
 export { ButtonGroup } from "./ButtonGroup";
+export * from "./Button";
 export { NumInput } from "./NumInput";
 export { InputDisplay } from "./InputDisplay";
 export { InputGroup } from "./InputGroup";

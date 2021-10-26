@@ -8,13 +8,19 @@ import TimersView from "./views/TimersView";
 
 const Container = styled.div`
   margin: 40px auto;
+  text-align: center;
+`;
+
+const StyledNav = styled.nav`
+  margin: 40px auto;
+  text-align: left;
 `;
 
 function App() {
   return (
     <Container>
       <Router>
-        <nav>
+        <StyledNav>
           <ul>
             <li>
               <Link to="/">Timers</Link>
@@ -23,7 +29,7 @@ function App() {
               <Link to="/docs">Documentation</Link>
             </li>
           </ul>
-        </nav>
+        </StyledNav>
         <Switch>
           <Route path="/docs">
             <DocumentationView />

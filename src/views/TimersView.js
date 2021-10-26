@@ -7,32 +7,47 @@ import XY from "../components/timers/XY";
 import Tabata from "../components/timers/Tabata";
 
 const Timers = styled.div`
-  width: auto;
+  margin: 0 3rem 0;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2rem;
 `;
 
 const Timer = styled.div`
   width: auto;
   height: auto;
   margin: 30px auto;
+
 `;
 
-const TimerTitle = styled.div``;
 
 function App() {
-  const timers = [
-    { title: "Stopwatch", C: <Stopwatch /> },
-    { title: "Countdown", C: <Countdown /> },
-    { title: "XY", C: <XY /> },
-    { title: "Tabata", C: <Tabata /> },
-  ];
 
   return (
     <Timers>
-      {timers.map((timer) => (
-        <Timer>
-          {timer.C}
-        </Timer>
-      ))}
+      <b></b>
+      <Timer>
+        <Stopwatch />
+      </Timer>
+      <Timer>
+        <Countdown mode="setTime"/>
+      </Timer>
+      <Timer>
+        <Countdown mode="displayTime" />
+      </Timer>
+      <Timer>
+        <XY mode="setTime" />
+      </Timer>
+      <Timer>
+        <XY mode="displayTime" />
+      </Timer>
+      <Timer>
+        <Tabata mode="setTime"/>
+      </Timer>
+      <Timer>
+        <Tabata mode="displayTime"/>
+      </Timer>
     </Timers>
   );
 }

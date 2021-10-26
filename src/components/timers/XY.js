@@ -1,17 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { theme } from "../../utils";
-import { darken, rem } from 'polished';
 import { Container, Header, Title, Subtitle, TimerDisplay, SetTimer, RunTimer, ButtonGroup, InputGroup, NumInput, InputDisplay, Rounds } from "../generic";
-import { StartButton, StopButton, ResetButton, Button } from "../generic/Button";
+import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
 
 class XY extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false,
+      mode: props.mode,
     };
   }
 
@@ -19,11 +16,11 @@ class XY extends React.Component {
     return (
       <Container>
         <Header><Title>XY</Title></Header>
-        <RunTimer visible={true}>
-          <TimerDisplay visible={false} >00:00:00</TimerDisplay>
-          <Rounds visible={false}>Round: 1 <span>of</span> 4</Rounds>
+        <RunTimer visible={this.state.mode === "displayTime"}>
+          <TimerDisplay visible={true} >00:00:00</TimerDisplay>
+          <Rounds visible={true}>Round: 1 <span>of</span> 4</Rounds>
         </RunTimer>
-        <SetTimer visible={true}>
+        <SetTimer visible={(this.state.mode === "setTime")}>
           <Subtitle>Set Timer</Subtitle>
           <InputDisplay >
             <InputGroup title="Rounds">                   
@@ -36,13 +33,17 @@ class XY extends React.Component {
           </InputDisplay>
         </SetTimer>
         <ButtonGroup>
-          <StopButton disabled={true} label="Stop"></StopButton>
+          <StopButton disabled={(this.state.mode === "setTime")} label="Stop"></StopButton>
           <ResetButton disabled={true} label="Reset"></ResetButton>
-          <StartButton label="Start">Start</StartButton>
+          <StartButton disabled={(this.state.mode === "displayTime")} label="Start"></StartButton>
         </ButtonGroup>
       </Container>
     );
   }
+}
+
+XY.propTypes = {
+  mode: PropTypes.string.isRequired,
 }
 
 export default XY;

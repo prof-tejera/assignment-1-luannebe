@@ -83,10 +83,16 @@ export const ResetButton = styled(StyledButton) `
   }
 `;
 
-/*
+
 Button.propTypes = {
-  label: PropTypes.string,
-}; */
+  disabled: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  disabled: false,
+};
 
 export default Button;
 

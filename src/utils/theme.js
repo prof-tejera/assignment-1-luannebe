@@ -1,4 +1,4 @@
-import { blue, green, red, neutral } from './colors';
+import { blue, green, red, neutral, violet, yellow } from './colors';
 import { primaryFont, displayFont } from './typography';
 
 export const theme = {
@@ -17,8 +17,11 @@ export const theme = {
 	mediumTextColor: blue[400],
 	darkTextColor: blue[500],
 
-	dropShadow: 'drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15))',
+	dropShadow: 'drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25))',
 	dropShadowOnHover: 'drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25))',
+
+	hotGradient: `linear-gradient(115.87deg, ${yellow[100]} 0%, ${red[200]} 100% )`,
+	coolGradient: `linear-gradient(115.87deg, ${violet[100]} 0%, ${blue[300]} 100% )`,
 
 	primaryFont,
 	displayFont

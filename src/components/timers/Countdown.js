@@ -1,17 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { theme } from "../../utils";
-import { darken, rem } from 'polished';
 import { Container, Header, Title, Subtitle, TimerDisplay, SetTimer, ButtonGroup, NumInput, InputDisplay } from "../generic";
-import { StartButton, StopButton, ResetButton, Button } from "../generic/Button";
+import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
 
 class Countdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false,
+      mode: props.mode,
     };
   }
 
@@ -19,8 +16,9 @@ class Countdown extends React.Component {
     return (
       <Container>
         <Header><Title>Countdown</Title></Header>
-        <TimerDisplay visible={false} >00:00:00</TimerDisplay>
-        <SetTimer visible={true}>
+        <TimerDisplay 
+          visible={(this.state.mode === "displayTime") } >00:00:00</TimerDisplay>
+        <SetTimer visible={(this.state.mode === "setTime")}>
           <Subtitle>Set Timer</Subtitle>
           <InputDisplay >
             <NumInput id="hours" name="hours" min="0" max="12" defaultVal="0" label="Hours" />
@@ -29,13 +27,17 @@ class Countdown extends React.Component {
           </InputDisplay>
         </SetTimer>
         <ButtonGroup>
-          <StopButton disabled={true} label="Stop"></StopButton>
+          <StopButton disabled={(this.state.mode === "setTime")} label="Stop"></StopButton>
           <ResetButton disabled={true} label="Reset"></ResetButton>
-          <StartButton label="Start">Start</StartButton>
+          <StartButton disabled={(this.state.mode === "displayTime")} label="Start"></StartButton>
         </ButtonGroup>
       </Container>
     );
   }
+}
+
+Countdown.propTypes = {
+  mode: PropTypes.string.isRequired,
 }
 
 export default Countdown;

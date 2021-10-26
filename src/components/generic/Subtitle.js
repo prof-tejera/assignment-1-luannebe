@@ -1,8 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme, typeScale, fontWeight } from "../../utils";
-import { darken, rem } from 'polished';
 
 export const Subtitle = styled.h3`
   margin: 1.2rem auto;
@@ -13,4 +10,4 @@ export const Subtitle = styled.h3`
   font-weight: ${fontWeight.bold};
   text-transform: none;
   text-align: center;
-`
+`;

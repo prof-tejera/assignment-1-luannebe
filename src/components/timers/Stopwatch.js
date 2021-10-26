@@ -1,19 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { theme } from "../../utils";
-import { darken, rem } from 'polished';
 import { Container, Header, Title, TimerDisplay, ButtonGroup } from "../generic";
-import { StartButton, StopButton, ResetButton, Button } from "../generic/Button";
+import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
 
 class Stopwatch extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-    };
-  }
 
   render() {
     return (
@@ -23,7 +13,7 @@ class Stopwatch extends React.Component {
         <ButtonGroup>
           <StopButton disabled={true} label="Stop"></StopButton>
           <ResetButton disabled={true} label="Reset"></ResetButton>
-          <StartButton label="Start">Start</StartButton>
+          <StartButton disabled={false} label="Start"></StartButton>
         </ButtonGroup>
       </Container>
     );

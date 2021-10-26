@@ -1,8 +1,6 @@
-import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme, typeScale, fontWeight } from "../../utils";
-import { darken, rem } from 'polished';
 
 export const Rounds = styled.h3`
   display: ${(props) => props.visible ? "block" : "none"};
@@ -18,4 +16,9 @@ export const Rounds = styled.h3`
   span {
     font-weight: ${fontWeight.regular}
   }
-`
+} 
+`;
+
+Rounds.propTypes = {
+  visible: PropTypes.bool.isRequired,
+}
