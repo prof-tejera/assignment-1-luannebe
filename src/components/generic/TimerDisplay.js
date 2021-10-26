@@ -1,10 +1,9 @@
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme, fontWeight } from "../../utils";
 import { rem } from 'polished';
 
 export const TimerDisplay = styled.div`
-  display: ${(props) => props.visible ? "block" : "none"};
+  display: block;
   width: auto;
   height: ${rem('80px')};
   margin: 0 10px 38px;
@@ -17,7 +16,3 @@ export const TimerDisplay = styled.div`
   background-color: ${theme.darkBackground};
   border-radius: 9px;
 `;
-
-TimerDisplay.propTypes = {
-  visible: PropTypes.bool.isRequired,
-}

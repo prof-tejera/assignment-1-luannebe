@@ -13,9 +13,9 @@ export class Button extends React.Component {
   }
 
   render() {
-    const { label } = this.props;
+    const { disabled, className, label } = this.props;
     return (
-      <button disabled={this.props.disabled} className={this.props.className} onClick={() => this.setState({ isDisabled: true })}>{label}</button>
+      <button disabled={disabled} className={className} onClick={() => this.setState({ isDisabled: true })}>{label}</button>
     );
   }
 }
@@ -86,7 +86,6 @@ export const ResetButton = styled(StyledButton) `
 
 Button.propTypes = {
   disabled: PropTypes.bool,
-  label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };
 

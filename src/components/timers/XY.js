@@ -33,9 +33,9 @@ class XY extends React.Component {
           </InputDisplay>
         </SetTimer>
         <ButtonGroup>
-          <StopButton disabled={(this.state.mode === "setTime")} label="Stop"></StopButton>
-          <ResetButton disabled={true} label="Reset"></ResetButton>
-          <StartButton disabled={(this.state.mode === "displayTime")} label="Start"></StartButton>
+          <StopButton disabled={(this.state.mode === "setTime")} label="Stop" />
+          <ResetButton disabled label="Reset" />
+          <StartButton disabled={(this.state.mode === "displayTime")} label="Start"/>
         </ButtonGroup>
       </Container>
     );

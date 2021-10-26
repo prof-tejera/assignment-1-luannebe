@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Header, Title, Subtitle, TimerDisplay, SetTimer, ButtonGroup, NumInput, InputDisplay } from "../generic";
+import { Container, Header, Title, Subtitle, TimerDisplay, SetTimer, RunTimer, ButtonGroup, NumInput, InputDisplay } from "../generic";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
 
@@ -16,8 +16,9 @@ class Countdown extends React.Component {
     return (
       <Container>
         <Header><Title>Countdown</Title></Header>
-        <TimerDisplay 
-          visible={(this.state.mode === "displayTime") } >00:00:00</TimerDisplay>
+        <RunTimer visible={this.state.mode === "displayTime"}>
+          <TimerDisplay>00:00:00</TimerDisplay>
+        </RunTimer>
         <SetTimer visible={(this.state.mode === "setTime")}>
           <Subtitle>Set Timer</Subtitle>
           <InputDisplay >
@@ -27,9 +28,9 @@ class Countdown extends React.Component {
           </InputDisplay>
         </SetTimer>
         <ButtonGroup>
-          <StopButton disabled={(this.state.mode === "setTime")} label="Stop"></StopButton>
-          <ResetButton disabled={true} label="Reset"></ResetButton>
-          <StartButton disabled={(this.state.mode === "displayTime")} label="Start"></StartButton>
+          <StopButton disabled={(this.state.mode === "setTime")} label="Stop" />
+          <ResetButton disabled label="Reset"  />
+          <StartButton disabled={(this.state.mode === "displayTime")} label="Start" />
         </ButtonGroup>
       </Container>
     );

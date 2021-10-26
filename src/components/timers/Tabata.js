@@ -19,11 +19,11 @@ class Tabata extends React.Component {
       <Container>
         <Header><Title>Tabata</Title></Header>
         <RunTimer visible={this.state.mode === "displayTime"}>
-          <TimerDisplay visible={true} >00:00:00</TimerDisplay>
-          <Rounds visible={true}>Round 1 <span>of</span> 4</Rounds>
+          <TimerDisplay visible>00:00:00</TimerDisplay>
+          <Rounds>Round 1 <span>of</span> 4</Rounds>
           <Cycle>
-            <WorkPeriod currentPeriod={false} label="Work" />
-            <RestPeriod currentPeriod={true} label="Rest" />
+            <WorkPeriod>Work</WorkPeriod>
+            <RestPeriod currentPeriod>Rest</RestPeriod>
           </Cycle>
         </RunTimer>
 

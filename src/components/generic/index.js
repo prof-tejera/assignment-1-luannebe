@@ -12,4 +12,4 @@ export { InputDisplay } from "./InputDisplay";
 export { InputGroup } from "./InputGroup";
 export { Rounds } from "./Rounds";
 export { Cycle } from "./Cycle";
-export { Period } from "./Period";
+export { WorkPeriod, RestPeriod } from "./Period";

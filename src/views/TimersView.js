@@ -28,7 +28,7 @@ function App() {
     <Timers>
       <b></b>
       <Timer>
-        <Stopwatch />
+        <Stopwatch mode="displayTime"/>
       </Timer>
       <Timer>
         <Countdown mode="setTime"/>
