@@ -1,5 +1,15 @@
 # Assignment 1
 
+## My Project
+
+My project can be viewed at https://prof-tejera.github.io/assignment-1-luannebe
+
+As far as UI design resources, I used:
+
+- Figma.com to prototype layouts.
+- Coolors.co to explore palettes. I found the Color Picker feature to be especially helpful for examining shades, tints, tones, and complements for any given color.
+
+
 ## Objective
 
 For Assignment 1 (A1) we are going to be building a component libary that we can use for future assignments. Our main goal is to layout the components that will be composed together to create our final bigger components. We will focus on composition, component interfaces, and styling. We aren't going to focus on functionality quite yet and at first our components will be very static.
