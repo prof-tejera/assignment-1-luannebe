@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Header, TimerDisplay, ButtonGroup } from "../../utils/containers";
+import { TimerDisplay, } from "../generic";
+import { Container, Header, ButtonGroup } from "../../utils/containers";
 import { Title,  } from "../../utils/headings";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
@@ -10,7 +11,7 @@ class Stopwatch extends React.Component {
     return (
       <Container>
         <Header><Title>Stopwatch</Title></Header>
-        <TimerDisplay >00:00:00</TimerDisplay>
+        <TimerDisplay hours="00" minutes="00" seconds="00" />
         <ButtonGroup>
           <StopButton disabled label="Stop" />
           <ResetButton disabled label="Reset" />

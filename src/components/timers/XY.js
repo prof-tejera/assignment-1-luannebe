@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { NumInput, Rounds } from "../generic";
-import { Container, Header, RunTimer, SetTimer, TimerDisplay, InputDisplay, InputGroup, ButtonGroup, } from "../../utils/containers";
+import { NumInput, TimerDisplay, Rounds } from "../generic";
+import { Container, Header, RunTimer, SetTimer, InputDisplay, InputGroup, ButtonGroup, } from "../../utils/containers";
 import { Title, Subtitle, Heading,  } from "../../utils/headings";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
 
@@ -19,8 +19,8 @@ class XY extends React.Component {
       <Container>
         <Header><Title>XY</Title></Header>
         <RunTimer visible={this.state.mode === "displayTime"}>
-          <TimerDisplay>00:00:00</TimerDisplay>
-          <Rounds>Round: 1 <span>of</span> 4</Rounds>
+          <TimerDisplay hours="00" minutes="00" seconds="00" />
+          <Rounds currentRound="1" totalRounds="4" />
         </RunTimer>
         <SetTimer visible={(this.state.mode === "setTime")}>
           <Subtitle>Set Timer</Subtitle>

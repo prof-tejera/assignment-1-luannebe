@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { NumInput, Rounds,  } from "../generic";
-import { Container, Header, RunTimer, SetTimer, TimerDisplay, InputDisplay,InputGroup, Cycle, ButtonGroup, } from "../../utils/containers";
+import { NumInput, Rounds, TimerDisplay,  } from "../generic";
+import { Container, Header, RunTimer, SetTimer, InputDisplay,InputGroup, Cycle, ButtonGroup, } from "../../utils/containers";
 import { Title,  Subtitle, Heading, } from "../../utils/headings";
 import { WorkPeriod, RestPeriod } from "../generic/Period";
 import { StartButton, StopButton, ResetButton } from "../generic/Button";
@@ -21,8 +21,8 @@ class Tabata extends React.Component {
       <Container>
         <Header><Title>Tabata</Title></Header>
         <RunTimer visible={this.state.mode === "displayTime"}>
-          <TimerDisplay visible>00:00:00</TimerDisplay>
-          <Rounds>Round 1 <span>of</span> 4</Rounds>
+          <TimerDisplay hours="00" minutes="00" seconds="00" />
+          <Rounds currentRound="1" totalRounds="4" />
           <Cycle>
             <WorkPeriod>Work</WorkPeriod>
             <RestPeriod currentPeriod>Rest</RestPeriod>

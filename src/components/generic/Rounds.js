@@ -1,7 +1,9 @@
+import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme, typeScale, fontWeight } from "../../utils";
 
-export const Rounds = styled.h3`
+const h3 = styled.h3`
   margin: 1.2rem auto;
   padding: 0 auto;
   color: ${theme.mediumTextColor}; 
@@ -16,3 +18,19 @@ export const Rounds = styled.h3`
   }
 } 
 `;
+
+export class Rounds extends React.Component {
+  render() {
+    const { currentRound, totalRounds } = this.props;
+    return (
+      <h3>Round {currentRound} <span>of</span> {totalRounds}</h3>
+    );
+  }
+}
+
+Rounds.propTypes = {
+  currentRound: PropTypes.string,
+  totalRounds: PropTypes.string,
+};
+
+export default Rounds;

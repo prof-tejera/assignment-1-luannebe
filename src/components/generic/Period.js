@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme, fontWeight, typeScale } from "../../utils";
 import { lighten } from 'polished';
@@ -28,7 +30,21 @@ export const RestPeriod = styled(StyledPeriod) `
   color: ${(props) => props.currentPeriod ? theme.lightTextColor : lighten(0.4, (theme.mediumTextColor)) };
   background: ${(props) => props.currentPeriod ? theme.coolGradient : theme.neutralBackground };
   border-color: ${(props) => props.currentPeriod ? theme.secondaryColor : theme.secondaryColor };
-
 `;
+
+export class Period extends React.Component {
+  render() {
+    const { isCurrentPeriod } = this.props;
+    return (
+      <div currentPeriod={isCurrentPeriod} />
+    );
+  }
+}
+
+Period.propTypes = {
+  isCurrentPeriod: PropTypes.bool,
+};
+
+export default Period;
 
 

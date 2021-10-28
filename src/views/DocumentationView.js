@@ -4,7 +4,9 @@ import styled from "styled-components";
 import DocumentComponent from "../components/documentation/DocumentComponent";
 
 import { StartButton } from "../components/generic/Button";
-import { NumInput } from "../components/generic";
+import { NumInput, TimerDisplay, Rounds, } from "../components/generic";
+import { WorkPeriod } from "../components/generic/Period";
+
 
 
 const Container = styled.div`
@@ -90,7 +92,61 @@ class Documentation extends React.Component {
               },
             ]}
           />
-        </div>
+          <DocumentComponent
+            title="Period"
+            component={<WorkPeriod currentPeriod>Work</WorkPeriod>}
+            propDocs={[
+              {
+                prop: "currentPeriod",
+                description: "Highlights current interval: work or rest",
+                type: "string",
+                defaultValue: "",
+              },
+            ]}
+          />
+          <DocumentComponent
+            title="Rounds"
+            component={<Rounds currentRound="1" totalRounds="4" />}
+            propDocs={[
+              {
+                prop: "currentRound",
+                description: "Number designating the current round",
+                type: "string",
+                defaultValue: "",
+              },
+              {
+                prop: "totalRounds",
+                description: "Total number of rounds in the workout",
+                type: "string",
+                defaultValue: "0",
+              },
+            ]}
+          />
+          <DocumentComponent
+            title="TimerDisplay"
+            component={<TimerDisplay hours="00" minutes="00" seconds="00" />}
+            propDocs={[
+              {
+                prop: "hours",
+                description: "Displays hours",
+                type: "string",
+                defaultValue: "00",
+              },
+              {
+                prop: "minutes",
+                description: "Displays minutes",
+                type: "string",
+                defaultValue: "00",
+              },
+              {
+                prop: "seconds",
+                description: "Displays seconds",
+                type: "string",
+                defaultValue: "00",
+              },
+            ]}
+          />
+       </div>
       </Container>
     );
   }
