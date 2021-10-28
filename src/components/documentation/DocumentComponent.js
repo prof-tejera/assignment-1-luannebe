@@ -10,6 +10,14 @@ const Container = styled.div`
   padding: 20px;
   display: flex;
   justify-content: space-between;
+
+  td, th {
+    padding: .5rem;
+ 
+  }
+  th {
+    background-color: gainsboro;
+  }
 `;
 
 const Title = styled.div`
